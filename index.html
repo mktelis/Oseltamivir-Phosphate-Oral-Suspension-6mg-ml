@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oseltamivir Phosphate | معلق أوسيلتاميفير فوسفات</title>
+    <!-- Google Fonts for Modern Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-dark: #0f382a;
+            --primary-gold: #c29b40;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #334155;
+            --text-heading: #0f172a;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            transition: var(--transition);
+        }
+
+        /* RTL Support */
+        body.rtl {
+            font-family: 'Cairo', sans-serif;
+            direction: rtl;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: var(--primary-dark);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo-container img {
+            height: 60px;
+            object-fit: contain;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+        }
+
+        .lang-switch {
+            background: transparent;
+            color: var(--primary-gold);
+            border: 2px solid var(--primary-gold);
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            font-family: inherit;
+        }
+
+        .lang-switch:hover {
+            background: var(--primary-gold);
+            color: var(--primary-dark);
+        }
+
+        /* Main Content */
+        main {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+
+        .hero-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .product-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            border: 4px solid white;
+        }
+
+        .title {
+            color: var(--text-heading);
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Info Cards */
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            border-top: 4px solid var(--primary-gold);
+            transition: transform 0.2s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-3px);
+        }
+
+        .card h2 {
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card ul {
+            padding-inline-start: 1.5rem;
+        }
+
+        .card li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Catchy Footer */
+        footer {
+            background-color: #05120e;
+            padding: 3rem 1rem;
+            text-align: center;
+            margin-top: 4rem;
+            border-top: 2px solid var(--primary-gold);
+        }
+
+        .copyright-box {
+            display: inline-block;
+            padding: 1.5rem 3rem;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(194, 155, 64, 0.3);
+            box-shadow: 0 0 20px rgba(194, 155, 64, 0.1);
+        }
+
+        .copyright-text {
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        .copyright-sub {
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+
+        /* Loading Spinner */
+        .loader {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid var(--primary-gold);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 2rem auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Responsive adjustments */
+        @media (min-width: 768px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .card:nth-child(1), .card:nth-child(2) {
+                grid-column: 1 / -1; /* Make important sections span full width */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="MKT Logo.jpg" alt="MKT Logo">
+        </div>
+        <button id="lang-btn" class="lang-switch" onclick="toggleLanguage()">العربية</button>
+    </header>
+
+    <main>
+        <div class="hero-section">
+            <img src="upscale_without_any_other_changes_202608252011.jpeg" alt="Oseltamivir Phosphate" class="product-image">
+            <h1 id="page-title" class="title">Loading...</h1>
+        </div>
+
+        <div id="content-grid" class="grid-container">
+            <div class="loader"></div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="copyright-box">
+            <div id="copyright-text" class="copyright-text">
+                All rights belong to PH.Mohamed Kamal Telis
+            </div>
+            <div class="copyright-sub">© 2026 Crafted with Passion & Code</div>
+        </div>
+    </footer>
+
+    <script>
+        // Data payload containing both languages
+        const medicalData = {
+            en: {
+                title: "Oseltamivir Phosphate Oral Suspension",
+                copyright: "All rights belong to PH. Mohamed Kamal Telis",
+                btnText: "العربية",
+                sections: [
+                    { title: "What this medicine is for", content: "Oseltamivir phosphate oral suspension treats influenza A and B in patients whose symptoms started within the last 48 hours, and it can also prevent flu after exposure to someone who is sick." },
+                    { title: "Dose (6 mg/mL oral suspension)", content: "<ul><li>Patients 2 weeks to <1 year: 0.5 mL/kg per dose, twice daily for 5 days (treatment only; prophylaxis not established in this age group).</li><li>15 kg or less: 5 mL per dose (30 mg) twice daily for 5 days (treatment) or once daily for 10 days (prophylaxis).</li><li>15.1-23 kg: 7.5 mL per dose (45 mg) same frequency/duration as above.</li><li>23.1-40 kg: 10 mL per dose (60 mg) same frequency/duration as above.</li><li>More than 40 kg: 12.5 mL per dose (75 mg) same frequency/duration as above.</li><li>Adults and adolescents ≥13 years: 12.5 mL (75 mg) twice daily for 5 days (treatment) or once daily for at least 10 days (prophylaxis).</li><li>Use an oral dosing device that measures mL accurately; a household spoon is not adequate. Dose reduction is required in renal impairment.</li></ul>" },
+                    { title: "How to take it", content: "<ul><li>Shake the bottle well before each dose and use the provided oral dosing dispenser (not a household spoon) to measure the exact amount prescribed.</li><li>It can be taken with or without food, but taking it with food may reduce stomach upset.</li><li>Take doses about 12 hours apart if using it twice daily for treatment, or at the same time each day if using it once daily for prevention.</li><li>Start treatment as soon as possible, ideally within 48 hours of the first flu symptoms; start prevention doses as soon as possible after exposure.</li><li>Complete the full course even if feeling better after a few days.</li></ul>" },
+                    { title: "Missed dose", content: "If a dose is missed, take it as soon as remembered. If it is within 2 hours of the next scheduled dose, skip the missed dose and resume the normal schedule do not double up." },
+                    { title: "Common side effects", content: "Nausea, vomiting, and headache are most common. Taking the suspension with food can help reduce nausea." },
+                    { title: "Serious warnings", content: "<strong>Seek immediate medical attention if these occur:</strong><ul><li>Signs of a severe allergic or skin reaction: rash, hives, blistering or peeling skin, mouth sores, swelling of the face/lips/tongue/throat, or trouble breathing - stop the medicine and get emergency care right away.</li><li>Unusual behavior or neuropsychiatric changes: confusion, abnormal speech, shaky movements, seizures, hallucinations, or self-injury - this has been reported mainly in children and adolescents with the flu itself, so caregivers should closely supervise activity and monitor behavior for the first few days of illness and report any changes immediately.</li></ul>" },
+                    { title: "Pregnancy", content: "Oseltamivir is the preferred first-line antiviral for influenza in pregnancy at any trimester. Data from more than 5,000 pregnancy exposures, including over 1,000 in the first trimester, have not shown an increased risk of birth defects. Because pregnant women are at higher risk of severe flu complications, prompt treatment (ideally within 2 days of symptom onset) is generally recommended after discussing risks and benefits with the prescriber." },
+                    { title: "Breastfeeding", content: "Oseltamivir is the preferred antiviral if an antiviral is needed while breastfeeding. Small amounts pass into breast milk, but no serious adverse effects in breastfed infants have been reported. The benefits of continuing breastfeeding should be weighed with the prescriber against the mother's clinical need for treatment." },
+                    { title: "Storage", content: "Store the suspension as directed by the pharmacy label; do not use after the expiration date on the bottle." }
+                ]
+            },
+            ar: {
+                title: "معلق أوسيلتاميفير فوسفات الفموي",
+                copyright: "جميع الحقوق محفوظة للصيدلي محمد كمال طليس",
+                btnText: "English",
+                sections: [
+                    { title: "دواعي استعمال هذا الدواء", content: "يُستخدم معلق أوسيلتاميفير فوسفات الفموي لعلاج الإنفلونزا من النوعين A و B لدى المرضى الذين بدأت أعراضهم خلال آخر 48 ساعة، كما يمكن استخدامه للوقاية من الإنفلونزا بعد التعرض لشخص مصاب." },
+                    { title: "الجرعة (معلق فموي بتركيز 6 ملغ/مل)", content: "<ul><li>الأطفال من عمر أسبوعين إلى أقل من سنة: 0.5 مل/كغ لكل جرعة، مرتين يوميًا لمدة 5 أيام (للعلاج فقط الوقاية غير مثبتة في هذه الفئة العمرية).</li><li>وزن 15 كغ أو أقل: 5 مل لكل جرعة (30 ملغ) مرتين يوميًا لمدة 5 أيام (علاج) أو مرة واحدة يوميًا لمدة 10 أيام (وقاية).</li><li>وزن 15.1-23 كغ: 7.5 مل لكل جرعة (45 ملغ) بنفس التكرار والمدة أعلاه.</li><li>وزن 23.1-40 كغ: 10 مل لكل جرعة (60 ملغ) – بنفس التكرار والمدة أعلاه.</li><li>وزن أكثر من 40 كغ: 12.5 مل لكل جرعة (75 ملغ) بنفس التكرار والمدة أعلاه.</li><li>البالغون والمراهقون (13 سنة فأكثر): 12.5 مل (75 ملغ) مرتين يوميًا لمدة 5 أيام (علاج) أو مرة واحدة يوميًا لمدة 10 أيام على الأقل (وقاية).</li><li>يجب استخدام أداة قياس فموية دقيقة بالمليلتر؛ لا تكفي الملعقة المنزلية. يلزم تعديل الجرعة في حالات القصور الكلوي.</li></ul>" },
+                    { title: "طريقة الاستعمال", content: "<ul><li>يجب رج الزجاجة جيدًا قبل كل جرعة، واستخدام أداة القياس الفموية المرفقة (وليس ملعقة منزلية) لقياس الكمية الموصوفة بدقة.</li><li>يمكن تناوله مع الطعام أو بدونه، لكن تناوله مع الطعام قد يقلل من اضطراب المعدة.</li><li>إذا كان يُستخدم مرتين يوميًا للعلاج، يجب الفصل بين الجرعتين بحوالي 12 ساعة؛ وإذا كان يُستخدم مرة واحدة يوميًا للوقاية، يجب تناوله في نفس الموعد كل يوم.</li><li>يُفضّل بدء العلاج في أسرع وقت ممكن خلال 48 ساعة من ظهور أعراض الإنفلونزا وبدء جرعات الوقاية في أقرب وقت ممكن بعد التعرض.</li><li>يجب إكمال المدة الكاملة للعلاج حتى لو تحسنت الحالة بعد بضعة أيام.</li></ul>" },
+                    { title: "في حال نسيان جرعة", content: "تُؤخذ الجرعة فور تذكرها. أما إذا كان الوقت المتبقي للجرعة التالية أقل من ساعتين، فتُترك الجرعة الفائتة ويُستأنف الجدول المعتاد – دون مضاعفة الجرعة." },
+                    { title: "الآثار الجانبية الشائعة", content: "الغثيان والقيء والصداع هي الأكثر شيوعًا. قد يساعد تناول المعلق مع الطعام في تقليل الغثيان." },
+                    { title: "تحذيرات خطيرة", content: "<strong>يجب طلب الرعاية الطبية الفورية عند حدوث ما يلي:</strong><ul><li>علامات تحسس شديد أو تفاعل جلدي خطير: طفح جلدي، شری، تقشر أو تقرح الجلد، تقرحات الفم، تورم الوجه أو الشفتين أو اللسان أو الحلق أو صعوبة في التنفس. يجب إيقاف الدواء وطلب رعاية طارئة فورًا.</li><li>تغيرات سلوكية غير معتادة أو أعراض عصبية نفسية: ارتباك، اضطراب في الكلام، حركات ارتعاشية، نوبات تشنجية، هلوسة، أو إيذاء النفس – وقد أبلغ عن ذلك بشكل أساسي لدى الأطفال والمراهقين المصابين بالإنفلونزا نفسها، لذا يُنصح مقدمو الرعاية بمراقبة النشاط والسلوك عن كثب خلال الأيام الأولى من المرض والإبلاغ فورا عن أي تغييرات.</li></ul>" },
+                    { title: "الحمل", content: "يُعد أوسيلتاميفير الخيار الأول المفضل لعلاج الإنفلونزا أثناء الحمل في أي ثلث منه. أظهرت بيانات أكثر من 5000 حالة تعرض أثناء الحمل، منها أكثر من 1000 حالة في الثلث الأول، عدم وجود زيادة في خطر التشوهات الخلقية. ولأن الحوامل أكثر عرضة لمضاعفات الإنفلونزا الشديدة، يُنصح عمومًا بالبدء المبكر بالعلاج (يفضل خلال يومين من ظهور الأعراض) بعد مناقشة الفوائد والمخاطر مع الطبيب المعالج." },
+                    { title: "الرضاعة الطبيعية", content: "يُعد أوسيلتاميفير الدواء المفضل إذا استلزم الأمر استخدام مضاد فيروسات أثناء الرضاعة الطبيعية. تنتقل كميات صغيرة منه إلى حليب الأم، لكن لم يُبلغ عن آثار جانبية خطيرة لدى الرضع المرضعين. يجب موازنة فوائد استمرار الرضاعة الطبيعية مع الحاجة السريرية للعلاج بالتشاور مع الطبيب." },
+                    { title: "التخزين", content: "يُخزّن المعلق وفق تعليمات ملصق الصيدلية، ولا يُستخدم بعد تاريخ انتهاء الصلاحية المدون على الزجاجة." }
+                ]
+            }
+        };
+
+        let currentLang = 'en';
+        let fetchedData = null;
+
+        // Simulate an API Fetch by encoding our JSON data into a Blob URL
+        async function fetchMedicalData() {
+            try {
+                // Creating a Blob to strictly utilize the fetch() API as requested
+                const blob = new Blob([JSON.stringify(medicalData)], { type: 'application/json' });
+                const url = URL.createObjectURL(blob);
+                
+                const response = await fetch(url);
+                fetchedData = await response.json();
+                
+                // Cleanup URL object
+                URL.revokeObjectURL(url);
+                
+                renderContent();
+            } catch (error) {
+                console.error("Error fetching data:", error);
+                document.getElementById('content-grid').innerHTML = "<p>Error loading data. Please refresh.</p>";
+            }
+        }
+
+        function renderContent() {
+            if (!fetchedData) return;
+
+            const data = fetchedData[currentLang];
+            
+            // Update Page Title and Structural text
+            document.getElementById('page-title').textContent = data.title;
+            document.getElementById('copyright-text').textContent = data.copyright;
+            document.getElementById('lang-btn').textContent = data.btnText;
+            
+            // Handle body direction (RTL vs LTR)
+            if(currentLang === 'ar') {
+                document.body.classList.add('rtl');
+            } else {
+                document.body.classList.remove('rtl');
+            }
+
+            // Build dynamic grid content
+            const grid = document.getElementById('content-grid');
+            grid.innerHTML = ''; // Clear loader or old content
+            
+            data.sections.forEach(section => {
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.innerHTML = `
+                    <h2>${section.title}</h2>
+                    <div class="card-body">${section.content}</div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'en' ? 'ar' : 'en';
+            
+            // Add a brief fade effect for smooth transition
+            document.querySelector('main').style.opacity = '0.3';
+            
+            setTimeout(() => {
+                renderContent();
+                document.querySelector('main').style.opacity = '1';
+            }, 200);
+        }
+
+        // Initialize Fetch on load
+        window.addEventListener('DOMContentLoaded', fetchMedicalData);
+
+    </script>
+</body>
+</html>
